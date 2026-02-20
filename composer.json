@@ -1,105 +1,25 @@
 {
-    "name": "nexus/monorepo",
-    "description": "Nexus - Framework-Agnostic PHP Packages for ERP Systems",
+    "name": "nexus/training-management",
+    "description": "Training courses, enrollments, trainers, and certification tracking for employee development",
     "type": "library",
     "license": "MIT",
+    "keywords": ["hrm", "training", "courses", "certification", "learning"],
     "require": {
-        "php": "^8.3",
-        "nexus/common": "*@dev",
-        "nexus/identity": "*@dev",
-        "nexus/backoffice": "*@dev",
-        "nexus/machine-learning": "*@dev",
-        "nexus/geo": "*@dev",
-        "nexus/routing": "*@dev",
-        "nexus/inventory": "*@dev",
-        "nexus/warehouse": "*@dev",
-        "nexus/manufacturing": "*@dev",
-        "nexus/journal-entry": "*@dev",
-        "nexus/chart-of-account": "*@dev",
-        "symfony/http-client": "^7.3",
-        "nyholm/psr7": "^1.8",
-        "psr/http-client": "^1.0",
-        "nexus/event-stream": "*@dev",
-        "nexus/tax": "*@dev",
-        "nexus/procurement-ml": "*@dev",
-        "nexus/tenant": "*@dev",
-        "nexus/procurement-operations": "*@dev",
-        "nexus/sanctions": "*@dev",
-        "nexus/aml-compliance": "*@dev",
-        "nexus/data-privacy": "*@dev",
-        "nexus/pdpa": "*@dev",
-        "nexus/payment": "*@dev",
-        "nexus/payment-gateway": "*@dev",
-        "nexus/payment-bank": "*@dev"
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./packages/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./orchestrators/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./adapters/*",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "allow-plugins": {
-            "php-http/discovery": true
-        }
+        "php": "^8.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.0",
-        "phpstan/phpstan": "^2.1"
+        "phpunit/phpunit": "^10.0"
     },
     "autoload": {
         "psr-4": {
-            "Nexus\\ProcurementOperations\\": "orchestrators/ProcurementOperations/src/",
-            "Nexus\\Sanctions\\": "packages/Sanctions/src/",
-            "Nexus\\AmlCompliance\\": "packages/AmlCompliance/src/",
-            "Nexus\\KycVerification\\": "packages/KycVerification/src/",
-            "Nexus\\DataPrivacy\\": "packages/DataPrivacy/src/",
-            "Nexus\\GDPR\\": "packages/GDPR/src/",
-            "Nexus\\PDPA\\": "packages/PDPA/src/",
-            "Nexus\\Payment\\": "packages/Payment/src/",
-            "Nexus\\PaymentGateway\\": "packages/PaymentGateway/src/",
-            "Nexus\\PaymentRails\\": "packages/PaymentRails/src/",
-            "Nexus\\PaymentBank\\": "packages/PaymentBank/src/",
-            "Nexus\\SupplyChainOperations\\": "orchestrators/SupplyChainOperations/src/",
-            "Nexus\\Sales\\": "packages/Sales/src/",
-            "Nexus\\Procurement\\": "packages/Procurement/src/",
-            "Nexus\\QualityControl\\": "packages/QualityControl/src/",
-            "Nexus\\Receivable\\": "packages/Receivable/src/"
+            "Nexus\\Training\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nexus\\ProcurementOperations\\Tests\\": "orchestrators/ProcurementOperations/tests/",
-            "Nexus\\Sanctions\\Tests\\": "packages/Sanctions/tests/",
-            "Nexus\\AmlCompliance\\Tests\\": "packages/AmlCompliance/tests/",
-            "Nexus\\KycVerification\\Tests\\": "packages/KycVerification/tests/",
-            "Nexus\\DataPrivacy\\Tests\\": "packages/DataPrivacy/tests/",
-            "Nexus\\GDPR\\Tests\\": "packages/GDPR/tests/",
-            "Nexus\\PDPA\\Tests\\": "packages/PDPA/tests/",
-            "Nexus\\Payment\\Tests\\": "packages/Payment/tests/",
-            "Nexus\\PaymentGateway\\Tests\\": "packages/PaymentGateway/tests/",
-            "Nexus\\PaymentRails\\Tests\\": "packages/PaymentRails/tests/",
-            "Nexus\\PaymentBank\\Tests\\": "packages/PaymentBank/tests/",
-            "Nexus\\SupplyChainOperations\\Tests\\": "orchestrators/SupplyChainOperations/tests/"
+            "Nexus\\Training\\Tests\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
